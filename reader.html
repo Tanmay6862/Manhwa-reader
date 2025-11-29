@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Reader — Preview</title>
+  <style>
+    body{font-family:Inter,Arial,Helvetica,sans-serif;background:#061021;color:#e6eef8;margin:0}
+    .top{position:sticky;top:0;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);padding:12px;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .container{max-width:840px;margin:0 auto;padding:20px}
+    img.page{width:100%;margin-bottom:18px;border-radius:8px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    .jump{color:#7dd3fc}
+  </style>
+</head>
+<body>
+  <div class="top"><div class="container"><a href="index.html" style="color:#9fbff3">← Back</a> <span style="float:right" class="jump"><a href="#bottom" style="color:inherit">Jump to bottom</a></span></div></div>
+  <div class="container" id="content">
+    <h2 id="title">Sample Reader</h2>
+    <div id="pages"></div>
+    <div id="bottom" style="height:80px"></div>
+  </div>
+  <script>
+    // simple client-side sample pages based on id
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id') || '1';
+    const pages = {
+      '1': [
+        'https://picsum.photos/seed/m1p1/800/1200',
+        'https://picsum.photos/seed/m1p2/800/1200',
+        'https://picsum.photos/seed/m1p3/800/1200'
+      ],
+      '2': [
+        'https://picsum.photos/seed/m2p1/800/1200',
+        'https://picsum.photos/seed/m2p2/800/1200'
+      ],
+      '3': [
+        'https://picsum.photos/seed/m3p1/800/1200',
+        'https://picsum.photos/seed/m3p2/800/1200',
+        'https://picsum.photos/seed/m3p3/800/1200',
+        'https://picsum.photos/seed/m3p4/800/1200'
+      ]
+    };
+    const p = pages[id] || pages['1'];
+    const container = document.getElementById('pages');
+    p.forEach(src=>{
+      const img = document.createElement('img');
+      img.src = src;
+      img.className = 'page';
+      img.loading = 'lazy';
+      container.appendChild(img);
+    });
+  </script>
+</body>
+</html>

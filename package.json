@@ -1,0 +1,8 @@
+{
+  "name": "manhwa-preview",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'This is a static site. No build step required.'"
+  }
+}

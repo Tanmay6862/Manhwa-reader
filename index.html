@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ManhwaWorld — Preview</title>
+  <style>
+    body{font-family:Inter,Arial,Helvetica,sans-serif;background:#071024;color:#e6eef8;margin:0}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    header{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:18px}
+    .card{background:rgba(255,255,255,0.03);border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .card img{width:100%;height:320px;object-fit:cover;display:block}
+    .card .meta{padding:12px}
+    a.read{display:inline-block;margin-top:8px;color:#60a5fa}
+    .dark-toggle{background:#0b1220;padding:8px;border-radius:8px;color:#9fbff3}
+    footer{padding:30px 0; color:#9aa7c7}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 style="margin:0">ManhwaWorld — Preview</h1>
+      <div>
+        <a class="dark-toggle" href="#">Dark</a>
+      </div>
+    </header>
+    <section>
+      <h2 style="margin-top:6px">Recommended</h2>
+      <div class="grid">
+        <div class="card">
+          <a href="reader.html?id=1"><img src="https://picsum.photos/seed/manhwa1/800/1200" alt="cover1"></a>
+          <div class="meta"><strong>Sample Manhwa One</strong><div><a class="read" href="reader.html?id=1">Read</a></div></div>
+        </div>
+        <div class="card">
+          <a href="reader.html?id=2"><img src="https://picsum.photos/seed/manhwa2/800/1200" alt="cover2"></a>
+          <div class="meta"><strong>Sample Manhwa Two</strong><div><a class="read" href="reader.html?id=2">Read</a></div></div>
+        </div>
+        <div class="card">
+          <a href="reader.html?id=3"><img src="https://picsum.photos/seed/manhwa3/800/1200" alt="cover3"></a>
+          <div class="meta"><strong>Sample Manhwa Three</strong><div><a class="read" href="reader.html?id=3">Read</a></div></div>
+        </div>
+      </div>
+    </section>
+    <footer><small>Preview generated — not the live app. Click any Read to open the reader sample.</small></footer>
+  </div>
+</body>
+</html>
